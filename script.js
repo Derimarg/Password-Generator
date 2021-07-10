@@ -1,5 +1,5 @@
 // Assignment code here
-var option;
+var option; // will host the selected options
 
 // Type of characters
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -55,11 +55,11 @@ function generatePassword() {
   if (!optionNumbers && !optionSpecialCharacter && !optionUpperCase && !optionLowerCase) {
     option = alert('Required a option criteria!');
 
-    // selected 4 random options
+    // selected 4 options
   } else if (optionNumbers && optionSpecialCharacter && optionUpperCase && optionLowerCase) {
     option = numbers.concat(specialCharacters, alphabet, alphabetUpper);
 
-    // selected 3 random options
+    // selected 3 options
   } else if (optionNumbers && optionSpecialCharacter && optionUpperCase) {
     option = numbers.concat(specialCharacters, alphabetUpper);
 
@@ -69,7 +69,7 @@ function generatePassword() {
   } else if (optionSpecialCharacter && optionLowerCase && optionUpperCase) {
     option = specialCharacters.concat(alphabet, alphabetUpper);
 
-    // selected 2 random options
+    // selected 2 options
   } else if (optionNumbers && optionLowerCase && optionUpperCase) {
     option = numbers.concat(alphabet, alphabetUpper);
 
@@ -91,7 +91,7 @@ function generatePassword() {
   } else if (optionNumbers && optionUpperCase) {
     option = numbers.concat(alphabetUpper);
 
-    // selected 1 random option
+    // selected 1 option
   } else if (optionNumbers) {
     option = numbers;
 
@@ -115,7 +115,6 @@ function generatePassword() {
   }
 
   //convertion of the array to a string
-  password = passwordEl.join('');
-
+  var password = passwordEl.join('');
   return password;
 }
