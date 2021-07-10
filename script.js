@@ -1,5 +1,5 @@
 // Assignment code here
-var option;
+var option; // will host the selected options
 
 // Type of characters
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -55,11 +55,11 @@ function generatePassword() {
   if (!optionNumbers && !optionSpecialCharacter && !optionUpperCase && !optionLowerCase) {
     option = alert('Required a option criteria!');
 
-    // selected 4 random options
+    // selected 4 options
   } else if (optionNumbers && optionSpecialCharacter && optionUpperCase && optionLowerCase) {
     option = numbers.concat(specialCharacters, alphabet, alphabetUpper);
 
-    // selected 3 random options
+    // selected 3 options
   } else if (optionNumbers && optionSpecialCharacter && optionUpperCase) {
     option = numbers.concat(specialCharacters, alphabetUpper);
 
@@ -69,29 +69,38 @@ function generatePassword() {
   } else if (optionSpecialCharacter && optionLowerCase && optionUpperCase) {
     option = specialCharacters.concat(alphabet, alphabetUpper);
 
-    // selected 2 random options
+    // selected 2 options
   } else if (optionNumbers && optionLowerCase && optionUpperCase) {
     option = numbers.concat(alphabet, alphabetUpper);
+
   } else if (optionNumbers && optionSpecialCharacter) {
     option = numbers.concat(specialCharacters);
+
   } else if (optionSpecialCharacter && optionLowerCase) {
     option = specialCharacters.concat(alphabet);
+
   } else if (optionSpecialCharacter && optionUpperCase) {
     option = specialCharacters.concat(alphabetUpper);
+
   } else if (optionNumbers && optionLowerCase) {
     option = numbers.concat(alphabet);
+
   } else if (optionLowerCase && optionUpperCase) {
     option = alphabet.concat(alphabetUpper);
+
   } else if (optionNumbers && optionUpperCase) {
     option = numbers.concat(alphabetUpper);
 
-    // selected 1 random option
+    // selected 1 option
   } else if (optionNumbers) {
     option = numbers;
+
   } else if (optionSpecialCharacter) {
     option = specialCharacters;
+
   } else if (optionLowerCase) {
     option = alphabet;
+
   } else if (optionUpperCase) {
     option = upperContainer.concat(alphabetUpper);
   };
@@ -106,7 +115,6 @@ function generatePassword() {
   }
 
   //convertion of the array to a string
-  password = passwordEl.join('');
-
+  var password = passwordEl.join('');
   return password;
 }
