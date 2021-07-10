@@ -72,26 +72,35 @@ function generatePassword() {
     // selected 2 random options
   } else if (optionNumbers && optionLowerCase && optionUpperCase) {
     option = numbers.concat(alphabet, alphabetUpper);
+
   } else if (optionNumbers && optionSpecialCharacter) {
     option = numbers.concat(specialCharacters);
+
   } else if (optionSpecialCharacter && optionLowerCase) {
     option = specialCharacters.concat(alphabet);
+
   } else if (optionSpecialCharacter && optionUpperCase) {
     option = specialCharacters.concat(alphabetUpper);
+
   } else if (optionNumbers && optionLowerCase) {
     option = numbers.concat(alphabet);
+
   } else if (optionLowerCase && optionUpperCase) {
     option = alphabet.concat(alphabetUpper);
+
   } else if (optionNumbers && optionUpperCase) {
     option = numbers.concat(alphabetUpper);
 
     // selected 1 random option
   } else if (optionNumbers) {
     option = numbers;
+
   } else if (optionSpecialCharacter) {
     option = specialCharacters;
+
   } else if (optionLowerCase) {
     option = alphabet;
+    
   } else if (optionUpperCase) {
     option = upperContainer.concat(alphabetUpper);
   };
